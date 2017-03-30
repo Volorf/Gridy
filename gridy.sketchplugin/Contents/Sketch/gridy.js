@@ -22,9 +22,11 @@ function superMainFunc (context, whatWeDo) {
 		} else if (selection.length == 1){
 			if (layer.className() == "MSShapeGroup") {
 				if (whatWeDo == "vertical") {
-					setPerfectRatioFontSizeForSelectedTextLayer();
+					createVeticalGuides();
 				} else if (whatWeDo == "horizontal") {
-					setPerfectRatioLineHeightForSelectedTextLayer();
+					createHorizontalGuides();
+				} else if (whatWeDo == "remove"){
+					removeAllGuides();
 				}
 			} else {
 				doc.showMessage("You should select a shape layer only");
@@ -33,11 +35,9 @@ function superMainFunc (context, whatWeDo) {
 			doc.showMessage("You should select an one layer only");
 		}
 
-	// Set perfect ratio for lineHeight
 	function createVeticalGuides () {
 		var target = [[doc currentPage] currentArtboard] || [doc currentPage];
-		log(target)
-		var input = Number(doc.askForUserInput_initialValue("Enter your data", "1"));
+		var input = Number(doc.askForUserInput_initialValue("Amount of sections", "1"));
 		var unit = layerWidth / input
 		[[target horizontalRulerData] addGuideWithValue:layerXMin]
 		[[target horizontalRulerData] addGuideWithValue: layerXMax]
@@ -46,13 +46,14 @@ function superMainFunc (context, whatWeDo) {
 				[[target horizontalRulerData] addGuideWithValue: layerXMin + (unit * i)]
 			}
 		}
+	}
+
+	function createHorizontalGuides () {
 
 	}
 
-	// Set perfect ratio for fontSize
-	function setPerfectRatioFontSizeForSelectedTextLayer () {
-		var getChoosedRatioFromUser = sketch.getSelectionFromUser("Choose ratio for Font Size", arrayRatioWords),
-		indexForArrayRatioNumbers = getChoosedRatioFromUser[1];
-		layer.setFontSize(lineHeightSelectedTextLayer / arrayRatioNumbers[indexForArrayRatioNumbers])
+	function removeAllGuides () {
+
 	}
+
 }
