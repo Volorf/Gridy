@@ -12,7 +12,10 @@ function superMainFunc (context, whatWeDo) {
 		selection = context.selection,
 		layer = selection.firstObject(),
 		fontSizeSelectedTextLayer = 0,
-	  sketch = context.api();
+	  sketch = context.api(),
+		layerWidth = layer.frame().width(),
+		layerXMin = layer.frame().x(),
+		layerXMax = layer.frame().x() + layerWidth;
 
 		if (selection.length == 0) {
 			doc.showMessage("You should select at least one text layer");
@@ -31,10 +34,19 @@ function superMainFunc (context, whatWeDo) {
 		}
 
 	// Set perfect ratio for lineHeight
-	function setPerfectRatioLineHeightForSelectedTextLayer () {
-	  var getChoosedRatioFromUser = sketch.getSelectionFromUser("Choose ratio for Line Height", arrayRatioWords),
-		indexForArrayRatioNumbers = getChoosedRatioFromUser[1];
-	  layer.setLineHeight(fontSizeSelectedTextLayer * arrayRatioNumbers[indexForArrayRatioNumbers]);
+	function createVeticalGuides () {
+		var target = [[doc currentPage] currentArtboard] || [doc currentPage];
+		log(target)
+		var input = Number(doc.askForUserInput_initialValue("Enter your data", "1"));
+		var unit = layerWidth / input
+		[[target horizontalRulerData] addGuideWithValue:layerXMin]
+		[[target horizontalRulerData] addGuideWithValue: layerXMax]
+		if (input > 1) {
+			for (var i = 1; i < input; i++) {
+				[[target horizontalRulerData] addGuideWithValue: layerXMin + (unit * i)]
+			}
+		}
+
 	}
 
 	// Set perfect ratio for fontSize
