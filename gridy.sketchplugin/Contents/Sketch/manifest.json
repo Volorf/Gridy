@@ -1,0 +1,33 @@
+{
+  "name": "Gridy",
+  "description": "Custom a grid with guides",
+  "author": "Oleg Frolov",
+  "authorEmail": "frolololeg@gmail.com",
+  "homepage": "https://github.com/Volorf/Gridy",
+  "version": 1.0,
+  "identifier": "com.example.sketch.gridy",
+  "compatibleVersion": 1,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Perfect a Line Height",
+      "identifier": "perfectLineHeight",
+      "shortcut": "ctrl shift l",
+      "script": "perfecter.js",
+      "handler": "perfectLineHeightFunc"
+    },
+    {
+      "name": "Perfect a Font Size",
+      "identifier": "perfectFontSize",
+      "shortcut": "ctrl shift f",
+      "script": "perfecter.js",
+      "handler": "perfectFontSizeFunc"
+    }
+  ],
+  "menu": {
+    "items": [
+      "perfectLineHeight",
+      "perfectFontSize"
+    ]
+  }
+}
