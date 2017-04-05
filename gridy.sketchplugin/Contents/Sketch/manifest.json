@@ -10,16 +10,32 @@
   "bundleVersion": 1,
   "commands": [
     {
-      "name": "Vertical guidelines",
+      "name": "Vertical guides",
       "identifier": "verticalGuides",
-      "shortcut": "ctrl shift alt v",
+      "shortcut": "ctrl alt v",
       "script": "gridy.js",
       "handler": "createVerticalGuides"
+    },
+    {
+      "name": "Horizontal guides",
+      "identifier": "horizontalGuides",
+      "shortcut": "ctrl alt h",
+      "script": "gridy.js",
+      "handler": "createHorizontalGuides"
+    },
+    {
+      "name": "Remove all guides",
+      "identifier": "allGuides",
+      "shortcut": "ctrl alt r",
+      "script": "gridy.js",
+      "handler": "removeAllGuides",
     }
   ],
   "menu": {
     "items": [
-      "verticalGuides"
+      "verticalGuides",
+      "horizontalGuides",
+      "allGuides"
     ]
   }
 }
