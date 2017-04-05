@@ -10,24 +10,16 @@
   "bundleVersion": 1,
   "commands": [
     {
-      "name": "Perfect a Line Height",
-      "identifier": "perfectLineHeight",
-      "shortcut": "ctrl shift l",
-      "script": "perfecter.js",
-      "handler": "perfectLineHeightFunc"
-    },
-    {
-      "name": "Perfect a Font Size",
-      "identifier": "perfectFontSize",
-      "shortcut": "ctrl shift f",
-      "script": "perfecter.js",
-      "handler": "perfectFontSizeFunc"
+      "name": "Vertical guidelines",
+      "identifier": "verticalGuides",
+      "shortcut": "ctrl shift alt v",
+      "script": "gridy.js",
+      "handler": "createVerticalGuides"
     }
   ],
   "menu": {
     "items": [
-      "perfectLineHeight",
-      "perfectFontSize"
+      "verticalGuides"
     ]
   }
 }
