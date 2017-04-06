@@ -2,7 +2,9 @@
 It is the simplest way to create guidelines for your design.
 ![Gridy](/gridy.png)
 
-## Install
+## Installation
+1. [Download the zip file with the Gridy](https://github.com/Volorf/Gridy/archive/master.zip).
+2. Double click on `gridy.sketchplugin`.
 
 ## Usage
 ### Create vertical guidelines
