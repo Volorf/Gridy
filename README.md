@@ -7,6 +7,11 @@ It is the simplest way to create guidelines for your design.
 1. [Download the zip file with the Gridy](https://github.com/Volorf/Gridy/archive/master.zip).
 2. Double click on `gridy.sketchplugin`.
 
+OR
+
+[![Install Gridy with Sketchpacks](http://sketchpacks-com.s3.amazonaws.com/assets/badges/sketchpacks-badge-install.png "Install Gridy with Sketchpacks")](https://sketchpacks.com/Volorf/Gridy/install)
+
+
 ## Usage
 ### Create vertical guidelines
 `ctrl + alt + v`
