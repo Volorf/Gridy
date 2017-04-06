@@ -1,5 +1,6 @@
 # Gridy
 It is the simplest way to create guidelines for your design.
+
 ![Gridy](/gridy.png)
 
 ## Installation
@@ -9,14 +10,17 @@ It is the simplest way to create guidelines for your design.
 ## Usage
 ### Create vertical guidelines
 `ctrl + alt + v`
+
 ![Create vertical guidelines](/create-vertical-guidelines.gif)
 
 ### Create horizontal guidelines
 `ctrl + alt + h`
+
 ![Create horizontal guidelines](/create-horizontal-guidelines.gif)
 
 ### Remove all guidelines
 `ctrl + alt + r`
+
 ![Remove all guidelines](/remove-all-guidelines.gif)
 
 ## Links
