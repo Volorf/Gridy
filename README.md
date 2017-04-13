@@ -1,5 +1,5 @@
 # Gridy
-Gridy Sketch plugin you can create horizontal and vertical guidelines of your selected layers fast!
+Gridy Sketch plugin allows you can create horizontal and vertical guidelines of your selected layers fast!
 
 ## Installation
 1. [Download the zip file with the Gridy](https://github.com/Volorf/Gridy/archive/master.zip).
