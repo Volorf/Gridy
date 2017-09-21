@@ -1,8 +1,7 @@
 // Main settings
 var settings = {
-  blur: "16",
-  offset: "8",
-  scale: "0.85"
+  amountOfSection: "1",
+  gutter: "0"
 }
 
 // Label function
