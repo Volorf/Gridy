@@ -28,7 +28,7 @@
       "identifier": "allGuides",
       "shortcut": "ctrl alt r",
       "script": "gridy.js",
-      "handler": "removeAllGuides",
+      "handler": "removeAllGuides"
     }
   ],
   "menu": {
